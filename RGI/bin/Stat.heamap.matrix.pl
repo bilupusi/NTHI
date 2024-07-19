@@ -12,7 +12,7 @@ while (<IN>){
 	while (<IN1>){
 		chomp;
 		my @a=split("\t",$_);
-		my @b=split(";",$a[14]);
+		my @b=split(";",$a[16]);  ###14 for Drug Class;16 for ARM gene family
 		$sample{$ID}{$b[0]}++;
 		$drug{$b[0]}=1;
 		}
