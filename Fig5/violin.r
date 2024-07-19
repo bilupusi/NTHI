@@ -1,6 +1,4 @@
 
-setwd("E:/BaiduSyncdisk/2023-Top-NTHI/NTHI-Dell/07.耐药结果")
-
 mydata<-read.table("ARO.input.txt",header = T,sep="\t",check.names = F)
 
 comparelist<-list(c("Acute", "Chronic"), 
@@ -20,9 +18,7 @@ p0<-ggplot(mydata,aes(x = Group, y = `ARM gene Family Number`,color=Group)) +
         panel.grid.minor = element_blank())+scale_color_manual(values=cols)
 
 
-
-#######output all for appendix##################
-
+#######output all ##################
 
 #1)APH(3'')	
 #2)APH(6)	
@@ -108,11 +104,8 @@ p8<-ggplot(mydata,aes(x = Group,
 
 
 library(gridExtra)
-
-grid.arrange(p1,p2,p3,p5,p6,nrow=2)
-
-grid.arrange(p0,p4,p8,nrow=1)
-
+#grid.arrange(p1,p2,p3,p5,p6,nrow=2)
+#grid.arrange(p0,p4,p8,nrow=1)
 grid.arrange(p0,p4,p5,p8,p6,nrow=2)
 
 
